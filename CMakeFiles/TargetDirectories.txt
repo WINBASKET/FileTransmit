@@ -1,0 +1,11 @@
+/home/cwj/srt-file_master/CMakeFiles/install/local.dir
+/home/cwj/srt-file_master/CMakeFiles/edit_cache.dir
+/home/cwj/srt-file_master/CMakeFiles/srt-file-transmit.dir
+/home/cwj/srt-file_master/CMakeFiles/srtsupport_virtual.dir
+/home/cwj/srt-file_master/CMakeFiles/srt_static.dir
+/home/cwj/srt-file_master/CMakeFiles/install.dir
+/home/cwj/srt-file_master/CMakeFiles/list_install_components.dir
+/home/cwj/srt-file_master/CMakeFiles/rebuild_cache.dir
+/home/cwj/srt-file_master/CMakeFiles/srt_shared.dir
+/home/cwj/srt-file_master/CMakeFiles/install/strip.dir
+/home/cwj/srt-file_master/CMakeFiles/srt_virtual.dir

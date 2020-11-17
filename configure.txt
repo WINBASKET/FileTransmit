@@ -1,0 +1,16 @@
+mode : caller
+source : file:///home/cwj/project/
+target : srt://192.168.0.27:8000
+
+
+
+/*
+mode : caller 
+source : file://file_path/Send fileName
+target : srt://ip:port
+target : srt://223.62.93.214:8080
+mode : listener 
+source : srt://:port
+target : file://file_path
+*/
+    

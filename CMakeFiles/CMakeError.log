@@ -1,0 +1,356 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_43c0c/fast && /usr/bin/make -f CMakeFiles/cmTC_43c0c.dir/build.make CMakeFiles/cmTC_43c0c.dir/build
+make[1]: 디렉터리 '/home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_43c0c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_43c0c.dir/src.c.o   -c /home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_43c0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43c0c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_43c0c.dir/src.c.o  -o cmTC_43c0c 
+/usr/bin/ld: CMakeFiles/cmTC_43c0c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_43c0c.dir/build.make:87: cmTC_43c0c] 오류 1
+make[1]: 디렉터리 '/home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_43c0c/fast] 오류 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_09629/fast && /usr/bin/make -f CMakeFiles/cmTC_09629.dir/build.make CMakeFiles/cmTC_09629.dir/build
+make[1]: 디렉터리 '/home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_09629.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09629.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_09629
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09629.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_09629.dir/CheckFunctionExists.c.o  -o cmTC_09629  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_09629.dir/build.make:87: cmTC_09629] 오류 1
+make[1]: 디렉터리 '/home/cwj/다운로드/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_09629/fast] 오류 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30af8/fast && /usr/bin/make -f CMakeFiles/cmTC_30af8.dir/build.make CMakeFiles/cmTC_30af8.dir/build
+make[1]: 디렉터리 '/home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_30af8.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_30af8.dir/src.c.o   -c /home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_30af8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30af8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_30af8.dir/src.c.o  -o cmTC_30af8 
+/usr/bin/ld: CMakeFiles/cmTC_30af8.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_30af8.dir/build.make:87: cmTC_30af8] 오류 1
+make[1]: 디렉터리 '/home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_30af8/fast] 오류 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_da47b/fast && /usr/bin/make -f CMakeFiles/cmTC_da47b.dir/build.make CMakeFiles/cmTC_da47b.dir/build
+make[1]: 디렉터리 '/home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_da47b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_da47b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_da47b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da47b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_da47b.dir/CheckFunctionExists.c.o  -o cmTC_da47b  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_da47b.dir/build.make:87: cmTC_da47b] 오류 1
+make[1]: 디렉터리 '/home/cwj/project/srt_file_example/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_da47b/fast] 오류 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d6047/fast && /usr/bin/make -f CMakeFiles/cmTC_d6047.dir/build.make CMakeFiles/cmTC_d6047.dir/build
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_d6047.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d6047.dir/src.c.o   -c /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d6047
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6047.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_d6047.dir/src.c.o  -o cmTC_d6047 
+/usr/bin/ld: CMakeFiles/cmTC_d6047.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d6047.dir/build.make:87: cmTC_d6047] 오류 1
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_d6047/fast] 오류 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_12545/fast && /usr/bin/make -f CMakeFiles/cmTC_12545.dir/build.make CMakeFiles/cmTC_12545.dir/build
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_12545.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_12545.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_12545
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12545.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_12545.dir/CheckFunctionExists.c.o  -o cmTC_12545  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_12545.dir/build.make:87: cmTC_12545] 오류 1
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_12545/fast] 오류 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_045bf/fast && make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_045bf.dir/build.make CMakeFiles/cmTC_045bf.dir/build
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_045bf.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_045bf.dir/src.c.o   -c /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_045bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_045bf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_045bf.dir/src.c.o  -o cmTC_045bf 
+/usr/bin/ld: CMakeFiles/cmTC_045bf.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_045bf.dir/build.make:87: cmTC_045bf] 오류 1
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make[1]: *** [Makefile:121: cmTC_045bf/fast] 오류 2
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59938/fast && make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_59938.dir/build.make CMakeFiles/cmTC_59938.dir/build
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_59938.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_59938.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_59938
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59938.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_59938.dir/CheckFunctionExists.c.o  -o cmTC_59938  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_59938.dir/build.make:87: cmTC_59938] 오류 1
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make[1]: *** [Makefile:121: cmTC_59938/fast] 오류 2
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ee7ba/fast && make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_ee7ba.dir/build.make CMakeFiles/cmTC_ee7ba.dir/build
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_ee7ba.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ee7ba.dir/src.c.o   -c /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ee7ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee7ba.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_ee7ba.dir/src.c.o  -o cmTC_ee7ba 
+/usr/bin/ld: CMakeFiles/cmTC_ee7ba.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_ee7ba.dir/build.make:87: cmTC_ee7ba] 오류 1
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make[1]: *** [Makefile:121: cmTC_ee7ba/fast] 오류 2
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_28350/fast && make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+/usr/bin/make -f CMakeFiles/cmTC_28350.dir/build.make CMakeFiles/cmTC_28350.dir/build
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_28350.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_28350.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_28350
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28350.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_28350.dir/CheckFunctionExists.c.o  -o cmTC_28350  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_28350.dir/build.make:87: cmTC_28350] 오류 1
+make[2]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make[1]: *** [Makefile:121: cmTC_28350/fast] 오류 2
+make[1]: 디렉터리 '/home/cwj/project/srt-file_master/CMakeFiles/CMakeTmp' 나감
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/cwj/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3848a/fast && /usr/bin/make -f CMakeFiles/cmTC_3848a.dir/build.make CMakeFiles/cmTC_3848a.dir/build
+make[1]: 디렉터리 '/home/cwj/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_3848a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3848a.dir/src.c.o   -c /home/cwj/srt-file_master/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3848a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3848a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_3848a.dir/src.c.o  -o cmTC_3848a 
+/usr/bin/ld: CMakeFiles/cmTC_3848a.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3848a.dir/build.make:87: cmTC_3848a] 오류 1
+make[1]: 디렉터리 '/home/cwj/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_3848a/fast] 오류 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/cwj/srt-file_master/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a8b9c/fast && /usr/bin/make -f CMakeFiles/cmTC_a8b9c.dir/build.make CMakeFiles/cmTC_a8b9c.dir/build
+make[1]: 디렉터리 '/home/cwj/srt-file_master/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_a8b9c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a8b9c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a8b9c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8b9c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a8b9c.dir/CheckFunctionExists.c.o  -o cmTC_a8b9c  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a8b9c.dir/build.make:87: cmTC_a8b9c] 오류 1
+make[1]: 디렉터리 '/home/cwj/srt-file_master/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:121: cmTC_a8b9c/fast] 오류 2
+
+
+

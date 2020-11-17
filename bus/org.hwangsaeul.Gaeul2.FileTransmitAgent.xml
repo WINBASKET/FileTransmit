@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<node xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd" name="/">
+  <interface name="org.hwangsaeul.Gaeul2.FileTransmitAgent">
+    <!--
+      Send
+      @path : set a send file path (~/file location/file name)
+      @id : specific id  
+    -->
+    <method name="Send">
+	   <arg name="path" direction="in" type="s"/>
+           <arg name="id" direction="out" type="u"/>
+    </method>
+
+    <!--
+      Receive
+      @path : return a receive file storage path
+   -->
+    <signal name="Receive">
+      <arg name="path" type="s"/>
+    </signal>
+
+  </interface>
+</node>
